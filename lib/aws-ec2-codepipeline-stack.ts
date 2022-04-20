@@ -29,6 +29,7 @@ export class AwsEc2CodepipelineStack extends Stack {
     });
 
     ec2SG.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(22), "Allow SSH");
+    ec2SG.addIngressRule(ec2.Peer.anyIpv4(), ec2.Port.tcp(3389), "Allow RDP");
 
     const ec2UserData = ec2.UserData.forWindows();
     ec2UserData.addCommands("echo Hello World");
