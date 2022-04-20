@@ -76,7 +76,7 @@ export class AwsEc2CodepipelineStack extends Stack {
           }),
         },
       ],
-      keyName: "pkquyen1996-key-pair",
+      keyName: "my-key-pair",
       vpcSubnets: {
         subnetType: ec2.SubnetType.PUBLIC,
       },
